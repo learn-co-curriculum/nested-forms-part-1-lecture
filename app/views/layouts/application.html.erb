@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NestedFormsPart1</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= link_to "View All Expeditions", expeditions_path %>
+    <%= link_to "Add New Expedition", new_expedition_path %>
+
+    <%= yield %>
+  </body>
+</html>

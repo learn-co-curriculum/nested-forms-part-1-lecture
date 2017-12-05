@@ -1,0 +1,50 @@
+<h3>Create a New Expedition</h3>
+
+<form action="/expeditions" method="POST">
+    <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token"/>
+    <div>
+        <label for="expedition_name">Name:</label>
+        <div>
+            <input type="text" placeholder="Name.." name="expedition[name]"/>
+        </div>
+    </div>
+    <div>
+        <label for="expedition_description">Description:</label>
+        <div>
+            <textarea placeholder="Description..." name="expedition[description]"></textarea>
+        </div>
+    </div>
+    <div>
+        <label for="expedition_length">Length:</label>
+        <div>
+            <input type="number" step="0.01" placeholder="10.5" name="expedition[length]"/>
+        </div>
+    </div>
+    <div>
+        <label for="expedition_difficulty">Difficulty:</label>
+        <div>
+            <input type="text" placeholder="Easy?" name="expedition[difficulty]"/>
+        </div>
+    </div>
+    <div>
+        <label for="expedition_gear">Gear:</label>
+        <div>
+            <div>
+                <input type="text" placeholder="Gear Name..." name="expedition[gear_attributes][][name]"/>
+            </div>
+            <div>
+                <input type="text" placeholder="Gear Name..." name="expedition[gear_attributes][][name]"/>
+            </div>
+            <div>
+                <input type="text" placeholder="Gear Name..." name="expedition[gear_attributes][][name]"/>
+            </div>
+            <div>
+                <input type="text" placeholder="Gear Name..." name="expedition[gear_attributes][][name]"/>
+            </div>
+            <div>
+                <input type="text" placeholder="Gear Name..." name="expedition[gear_attributes][][name]"/>
+            </div>
+        </div>
+    </div>
+    <input type="submit" value="Add Expedition"/>
+</form>

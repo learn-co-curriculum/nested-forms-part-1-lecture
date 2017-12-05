@@ -1,0 +1,23 @@
+<h1>Expeditions</h1>
+
+<% @expeditions.each do |expedition| %>
+    <div>
+        <h3><%= expedition.name %>
+        <h5>Difficulty: <%= expedition.difficulty %> | Length: <%= expedition.length %></h5>
+        <h5>Average Rating: <%= expedition.average_rating %></h5>
+        <p><%= expedition.description %></p>
+        <p>Gear:</p>
+        <ul>
+            <% expedition.gear.each do |gear| %>
+                <li><%= gear.name %></li>
+            <% end %>
+        </ul>
+        <p>Reviews:</p>
+        <% expedition.reviews.each do |review| %>
+            <div>
+                <h5>Rating | <%= review.rating %></h5>
+                <p><%= review.content %></p>
+            </div>
+        <% end %>
+    </div>
+<% end %>
